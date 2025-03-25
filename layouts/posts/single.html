@@ -55,6 +55,10 @@
     </div>
     {{ end }}
 
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+
     {{ if .Site.Config.Services.Disqus.Shortname }}
       {{ if not (eq .Params.Comments "false") }}
         <div id="comments">
@@ -72,6 +76,7 @@
       {{ end }}
       {{ end }}
     </p>
+    {{- end }}
 
     {{- if .GitInfo }}
     <p>
